@@ -1,0 +1,21 @@
+version: "2"
+services:
+  transmission:
+    image: linuxserver/transmission
+    container_name: ${COMPOSE_PROJECT_NAME}
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Moscow
+      - TRANSMISSION_WEB_HOME=/combustion-release/ #optional
+      - USER=${username} #optional
+      - PASS=${password} #optional
+    volumes:
+      - ${DATA_PATH}/config:/config
+      - ${DATA_PATH}/downloads:/downloads
+      - ${DATA_PATH}/watch:/watch
+    ports:
+      -  "${IP}:9091:9091"
+      -  "${IP}:51413:51413"
+      -  "${IP}:51413:51413/udp"
+    restart: unless-stopped
