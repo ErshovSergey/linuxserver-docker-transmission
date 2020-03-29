@@ -1,3 +1,5 @@
+Обертка для https://github.com/linuxserver/docker-transmission
+
 # Transmission
 Параметры для запуска настраиваются в файле *.env* (переименовать *.env-default* в *.env*)  
 
