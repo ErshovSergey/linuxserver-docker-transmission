@@ -12,3 +12,13 @@ docker-compose up --build -d --remove-orphans --force-recreate
 ```
 docker-compose down --remove-orphans
 ```
+
+### Рестарт
+```
+docker-compose up --build -d --remove-orphans --force-recreate
+```
+
+### Обновление 
+```
+docker pull linuxserver/transmission
+```
